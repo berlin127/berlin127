@@ -68,7 +68,6 @@ const MARS48 = new Discord.Client();
 const MARS49 = new Discord.Client();
 const MARS50 = new Discord.Client();
 
-
 const help = `**
     DevMars
 **`;
@@ -84,17 +83,15 @@ MARS.on("message", async msg => {
   if (msg.author.bot) return;
   if (!dinfo)
     dinfo = {
-      // 
+      //
       owner: config.kahrbaaid,
       serverid: "NONE",
-      channelid: "NONE", 
+      channelid: "NONE",
       timespam: "NONE",
       timestop: "NONE"
     };
   if (msg.content.startsWith(config.prefix + "setownerID")) {
-    
     if (msg.channel.type == "dm")
-    
       return msg.reply("** لا تستيطع استخدام الامر علي الخاص .. **");
     if (!dinfo.owner.includes(msg.author.id)) return;
     let args = msg.content
@@ -117,7 +114,6 @@ MARS.on("message", async msg => {
   }
   if (msg.content.startsWith(config.prefix + "setserverID")) {
     if (msg.channel.type == "dm")
-      
       return msg.reply("** لا تستيطع استخدام الامر علي الخاص .. **");
     if (!dinfo.owner.includes(msg.author.id)) return;
     let args = msg.content
@@ -159,7 +155,6 @@ MARS.on("message", async msg => {
     });
   }
   if (msg.content.startsWith(config.prefix + "settimeSpam")) {
-
     if (msg.channel.type == "dm")
       return msg.reply("** لا تستيطع استخدام الامر علي الخاص .. **");
     if (!dinfo.owner.includes(msg.author.id)) return;
@@ -199,25 +194,24 @@ MARS.on("message", async msg => {
       if (a) throw a;
     });
   }
-}); 
+});
 
 MARS.on("message", async message => {
   if (message.content === prefix + "reset") {
-    if (!dinfo.owner.includes(message.author.id)) return; 
+    if (!dinfo.owner.includes(message.author.id)) return;
     dinfo.serverid = "NONE";
     dinfo.channelid = "NONE";
-    dinfo.timespam = "NONE"; 
+    dinfo.timespam = "NONE";
     dinfo.timestop = "NONE";
     message.channel.send(`**⚠️ restsettings , <@${dinfo.owner}>**`);
     fs.writeFile("./data.json", JSON.stringify(dinfo), function(a) {
       if (a) throw a;
     });
-    await cmd.run("refresh"); 
+    await cmd.run("refresh");
   }
 });
 
 // ======= [ settings JSON - END   ] ======== //
-
 
 // ======= [ Reload JSON   ] ======== //
 MARS.on("message", async message => {
@@ -2062,9 +2056,6 @@ MARS50.on("message", async message => {
 
 //
 
-        
-        
-
 // ======= [ MODE - React MSG END  ] ======== //
 
 // ======= [ functions - Join Server , add Friend   ] ======== //
@@ -3068,177 +3059,746 @@ MARS50.on("message", message => {
 
 // ======= [ Daily - INFO ] ======== //"#dai
 
-
 // ======= [ Daily - INFO end ] ======== //
 
 // ======= [ PROFILE - INFO ] ======== //
 
-
-
-
 //////// playing or dnd ////////
 
 MARS.on("ready", () => {
-  console.log(
-    `Online In Servers`
-  );
+  console.log(`Online In Servers`);
   let statuses = [
     ///// لێرانە شتێک بووسە بۆ ستریمینگەکە
     //// لە شوێنی تێکستەکان شتەکانت بنووسە
-  `زۆڵـــــی پــــڕۆچــــێــــکـــــت`,
-  `بــــاپــــیرە گــــەورەی بـــۆتــــەکــــان`,
-    
-    
+    `زۆڵـــــی پــــڕۆچــــێــــکـــــت`,
+    `بــــاپــــیرە گــــەورەی بـــۆتــــەکــــان`
   ];
   setInterval(function() {
     let STREAMING = statuses[Math.floor(Math.random() * statuses.length)];
-    MARS.user.setActivity(STREAMING, {      
-    type: "playing", 
-    url: "https://www.twitch.tv/faith"
+    MARS.user.setActivity(STREAMING, {
+      type: "playing",
+      url: "https://www.twitch.tv/faith"
     });
   }, 2000);
 });
 
+MARS2.on("ready", () => {
+  console.log(`Online In Servers`);
+  let statuses = [`《KP》UP`];
+  setInterval(function() {
+    let STREAMING = statuses[Math.floor(Math.random() * statuses.length)];
+    MARS2.user.setActivity(STREAMING, {
+      type: "playing",
+      url: "https://www.twitch.tv/faith"
+    });
+  }, 2000);
+});
 
-MARS2.on("ready", () => { console.log( `Online In Servers` ); let statuses = [ 
-`زۆڵـــــی پــــڕۆچــــێــــکـــــت`, `بــــاپــــیرە گــــەورەی بـــۆتــــەکــــان`, ]; setInterval(function() { let STREAMING = statuses[Math.floor(Math.random() * statuses.length)]; MARS2.user.setActivity(STREAMING, { type: "playing", url: "https://www.twitch.tv/faith" }); }, 2000);});
+MARS3.on("ready", () => {
+  console.log(`Online In Servers`);
+  let statuses = [`《KP》UP`];
+  setInterval(function() {
+    let STREAMING = statuses[Math.floor(Math.random() * statuses.length)];
+    MARS3.user.setActivity(STREAMING, {
+      type: "playing",
+      url: "https://www.twitch.tv/faith"
+    });
+  }, 2000);
+});
 
-MARS3.on("ready", () => { console.log( `Online In Servers` ); let statuses = [ 
-`زۆڵـــــی پــــڕۆچــــێــــکـــــت`, `بــــاپــــیرە گــــەورەی بـــۆتــــەکــــان`, ]; setInterval(function() { let STREAMING = statuses[Math.floor(Math.random() * statuses.length)]; MARS3.user.setActivity(STREAMING, { type: "playing", url: "https://www.twitch.tv/faith" }); }, 2000);});
+MARS4.on("ready", () => {
+  console.log(`Online In Servers`);
+  let statuses = [
+    `زۆڵـــــی پــــڕۆچــــێــــکـــــت`,
+    `بــــاپــــیرە گــــەورەی بـــۆتــــەکــــان`
+  ];
+  setInterval(function() {
+    let STREAMING = statuses[Math.floor(Math.random() * statuses.length)];
+    MARS4.user.setActivity(STREAMING, {
+      type: "playing",
+      url: "https://www.twitch.tv/faith"
+    });
+  }, 2000);
+});
 
-MARS4.on("ready", () => { console.log( `Online In Servers` ); let statuses = [ 
-`زۆڵـــــی پــــڕۆچــــێــــکـــــت`, `بــــاپــــیرە گــــەورەی بـــۆتــــەکــــان`, ]; setInterval(function() { let STREAMING = statuses[Math.floor(Math.random() * statuses.length)]; MARS4.user.setActivity(STREAMING, { type: "playing", url: "https://www.twitch.tv/faith" }); }, 2000);});
+MARS5.on("ready", () => {
+  console.log(`Online In Servers`);
+  let statuses = [
+    `زۆڵـــــی پــــڕۆچــــێــــکـــــت`,
+    `بــــاپــــیرە گــــەورەی بـــۆتــــەکــــان`
+  ];
+  setInterval(function() {
+    let STREAMING = statuses[Math.floor(Math.random() * statuses.length)];
+    MARS5.user.setActivity(STREAMING, {
+      type: "playing",
+      url: "https://www.twitch.tv/faith"
+    });
+  }, 2000);
+});
 
-MARS5.on("ready", () => { console.log( `Online In Servers` ); let statuses = [ 
-`زۆڵـــــی پــــڕۆچــــێــــکـــــت`, `بــــاپــــیرە گــــەورەی بـــۆتــــەکــــان`, ]; setInterval(function() { let STREAMING = statuses[Math.floor(Math.random() * statuses.length)]; MARS5.user.setActivity(STREAMING, { type: "playing", url: "https://www.twitch.tv/faith" }); }, 2000);});
+MARS6.on("ready", () => {
+  console.log(`Online In Servers`);
+  let statuses = [
+    `زۆڵـــــی پــــڕۆچــــێــــکـــــت`,
+    `بــــاپــــیرە گــــەورەی بـــۆتــــەکــــان`
+  ];
+  setInterval(function() {
+    let STREAMING = statuses[Math.floor(Math.random() * statuses.length)];
+    MARS6.user.setActivity(STREAMING, {
+      type: "playing",
+      url: "https://www.twitch.tv/faith"
+    });
+  }, 2000);
+});
 
-MARS6.on("ready", () => { console.log( `Online In Servers` ); let statuses = [ 
-`زۆڵـــــی پــــڕۆچــــێــــکـــــت`, `بــــاپــــیرە گــــەورەی بـــۆتــــەکــــان`, ]; setInterval(function() { let STREAMING = statuses[Math.floor(Math.random() * statuses.length)]; MARS6.user.setActivity(STREAMING, { type: "playing", url: "https://www.twitch.tv/faith" }); }, 2000);});
+MARS7.on("ready", () => {
+  console.log(`Online In Servers`);
+  let statuses = [
+    `زۆڵـــــی پــــڕۆچــــێــــکـــــت`,
+    `بــــاپــــیرە گــــەورەی بـــۆتــــەکــــان`
+  ];
+  setInterval(function() {
+    let STREAMING = statuses[Math.floor(Math.random() * statuses.length)];
+    MARS7.user.setActivity(STREAMING, {
+      type: "playing",
+      url: "https://www.twitch.tv/faith"
+    });
+  }, 2000);
+});
 
-MARS7.on("ready", () => { console.log( `Online In Servers` ); let statuses = [ 
-`زۆڵـــــی پــــڕۆچــــێــــکـــــت`, `بــــاپــــیرە گــــەورەی بـــۆتــــەکــــان`, ]; setInterval(function() { let STREAMING = statuses[Math.floor(Math.random() * statuses.length)]; MARS7.user.setActivity(STREAMING, { type: "playing", url: "https://www.twitch.tv/faith" }); }, 2000);});
+MARS8.on("ready", () => {
+  console.log(`Online In Servers`);
+  let statuses = [
+    `زۆڵـــــی پــــڕۆچــــێــــکـــــت`,
+    `بــــاپــــیرە گــــەورەی بـــۆتــــەکــــان`
+  ];
+  setInterval(function() {
+    let STREAMING = statuses[Math.floor(Math.random() * statuses.length)];
+    MARS8.user.setActivity(STREAMING, {
+      type: "playing",
+      url: "https://www.twitch.tv/faith"
+    });
+  }, 2000);
+});
 
-MARS8.on("ready", () => { console.log( `Online In Servers` ); let statuses = [ 
-`زۆڵـــــی پــــڕۆچــــێــــکـــــت`, `بــــاپــــیرە گــــەورەی بـــۆتــــەکــــان`, ]; setInterval(function() { let STREAMING = statuses[Math.floor(Math.random() * statuses.length)]; MARS8.user.setActivity(STREAMING, { type: "playing", url: "https://www.twitch.tv/faith" }); }, 2000);});
+MARS9.on("ready", () => {
+  console.log(`Online In Servers`);
+  let statuses = [
+    `زۆڵـــــی پــــڕۆچــــێــــکـــــت`,
+    `بــــاپــــیرە گــــەورەی بـــۆتــــەکــــان`
+  ];
+  setInterval(function() {
+    let STREAMING = statuses[Math.floor(Math.random() * statuses.length)];
+    MARS9.user.setActivity(STREAMING, {
+      type: "playing",
+      url: "https://www.twitch.tv/faith"
+    });
+  }, 2000);
+});
 
-MARS9.on("ready", () => { console.log( `Online In Servers` ); let statuses = [ 
-`زۆڵـــــی پــــڕۆچــــێــــکـــــت`, `بــــاپــــیرە گــــەورەی بـــۆتــــەکــــان`, ]; setInterval(function() { let STREAMING = statuses[Math.floor(Math.random() * statuses.length)]; MARS9.user.setActivity(STREAMING, { type: "playing", url: "https://www.twitch.tv/faith" }); }, 2000);});
+MARS10.on("ready", () => {
+  console.log(`Online In Servers`);
+  let statuses = [
+    `زۆڵـــــی پــــڕۆچــــێــــکـــــت`,
+    `بــــاپــــیرە گــــەورەی بـــۆتــــەکــــان`
+  ];
+  setInterval(function() {
+    let STREAMING = statuses[Math.floor(Math.random() * statuses.length)];
+    MARS10.user.setActivity(STREAMING, {
+      type: "playing",
+      url: "https://www.twitch.tv/faith"
+    });
+  }, 2000);
+});
 
-MARS10.on("ready", () => { console.log( `Online In Servers` ); let statuses = [ 
-`زۆڵـــــی پــــڕۆچــــێــــکـــــت`, `بــــاپــــیرە گــــەورەی بـــۆتــــەکــــان`, ]; setInterval(function() { let STREAMING = statuses[Math.floor(Math.random() * statuses.length)]; MARS10.user.setActivity(STREAMING, { type: "playing", url: "https://www.twitch.tv/faith" }); }, 2000);});
+MARS11.on("ready", () => {
+  console.log(`Online In Servers`);
+  let statuses = [
+    `زۆڵـــــی پــــڕۆچــــێــــکـــــت`,
+    `بــــاپــــیرە گــــەورەی بـــۆتــــەکــــان`
+  ];
+  setInterval(function() {
+    let STREAMING = statuses[Math.floor(Math.random() * statuses.length)];
+    MARS11.user.setActivity(STREAMING, {
+      type: "playing",
+      url: "https://www.twitch.tv/faith"
+    });
+  }, 2000);
+});
 
-MARS11.on("ready", () => { console.log( `Online In Servers` ); let statuses = [ 
-`زۆڵـــــی پــــڕۆچــــێــــکـــــت`, `بــــاپــــیرە گــــەورەی بـــۆتــــەکــــان`, ]; setInterval(function() { let STREAMING = statuses[Math.floor(Math.random() * statuses.length)]; MARS11.user.setActivity(STREAMING, { type: "playing", url: "https://www.twitch.tv/faith" }); }, 2000);});
+MARS12.on("ready", () => {
+  console.log(`Online In Servers`);
+  let statuses = [
+    `زۆڵـــــی پــــڕۆچــــێــــکـــــت`,
+    `بــــاپــــیرە گــــەورەی بـــۆتــــەکــــان`
+  ];
+  setInterval(function() {
+    let STREAMING = statuses[Math.floor(Math.random() * statuses.length)];
+    MARS12.user.setActivity(STREAMING, {
+      type: "playing",
+      url: "https://www.twitch.tv/faith"
+    });
+  }, 2000);
+});
 
-MARS12.on("ready", () => { console.log( `Online In Servers` ); let statuses = [ 
-`زۆڵـــــی پــــڕۆچــــێــــکـــــت`, `بــــاپــــیرە گــــەورەی بـــۆتــــەکــــان`, ]; setInterval(function() { let STREAMING = statuses[Math.floor(Math.random() * statuses.length)]; MARS12.user.setActivity(STREAMING, { type: "playing", url: "https://www.twitch.tv/faith" }); }, 2000);});
+MARS13.on("ready", () => {
+  console.log(`Online In Servers`);
+  let statuses = [
+    `زۆڵـــــی پــــڕۆچــــێــــکـــــت`,
+    `بــــاپــــیرە گــــەورەی بـــۆتــــەکــــان`
+  ];
+  setInterval(function() {
+    let STREAMING = statuses[Math.floor(Math.random() * statuses.length)];
+    MARS13.user.setActivity(STREAMING, {
+      type: "playing",
+      url: "https://www.twitch.tv/faith"
+    });
+  }, 2000);
+});
 
-MARS13.on("ready", () => { console.log( `Online In Servers` ); let statuses = [ 
-`زۆڵـــــی پــــڕۆچــــێــــکـــــت`, `بــــاپــــیرە گــــەورەی بـــۆتــــەکــــان`, ]; setInterval(function() { let STREAMING = statuses[Math.floor(Math.random() * statuses.length)]; MARS13.user.setActivity(STREAMING, { type: "playing", url: "https://www.twitch.tv/faith" }); }, 2000);});
+MARS14.on("ready", () => {
+  console.log(`Online In Servers`);
+  let statuses = [
+    `زۆڵـــــی پــــڕۆچــــێــــکـــــت`,
+    `بــــاپــــیرە گــــەورەی بـــۆتــــەکــــان`
+  ];
+  setInterval(function() {
+    let STREAMING = statuses[Math.floor(Math.random() * statuses.length)];
+    MARS14.user.setActivity(STREAMING, {
+      type: "playing",
+      url: "https://www.twitch.tv/faith"
+    });
+  }, 2000);
+});
 
-MARS14.on("ready", () => { console.log( `Online In Servers` ); let statuses = [ 
-`زۆڵـــــی پــــڕۆچــــێــــکـــــت`, `بــــاپــــیرە گــــەورەی بـــۆتــــەکــــان`, ]; setInterval(function() { let STREAMING = statuses[Math.floor(Math.random() * statuses.length)]; MARS14.user.setActivity(STREAMING, { type: "playing", url: "https://www.twitch.tv/faith" }); }, 2000);});
+MARS15.on("ready", () => {
+  console.log(`Online In Servers`);
+  let statuses = [
+    `زۆڵـــــی پــــڕۆچــــێــــکـــــت`,
+    `بــــاپــــیرە گــــەورەی بـــۆتــــەکــــان`
+  ];
+  setInterval(function() {
+    let STREAMING = statuses[Math.floor(Math.random() * statuses.length)];
+    MARS15.user.setActivity(STREAMING, {
+      type: "playing",
+      url: "https://www.twitch.tv/faith"
+    });
+  }, 2000);
+});
 
-MARS15.on("ready", () => { console.log( `Online In Servers` ); let statuses = [ 
-`زۆڵـــــی پــــڕۆچــــێــــکـــــت`, `بــــاپــــیرە گــــەورەی بـــۆتــــەکــــان`, ]; setInterval(function() { let STREAMING = statuses[Math.floor(Math.random() * statuses.length)]; MARS15.user.setActivity(STREAMING, { type: "playing", url: "https://www.twitch.tv/faith" }); }, 2000);});
+MARS16.on("ready", () => {
+  console.log(`Online In Servers`);
+  let statuses = [
+    `زۆڵـــــی پــــڕۆچــــێــــکـــــت`,
+    `بــــاپــــیرە گــــەورەی بـــۆتــــەکــــان`
+  ];
+  setInterval(function() {
+    let STREAMING = statuses[Math.floor(Math.random() * statuses.length)];
+    MARS16.user.setActivity(STREAMING, {
+      type: "playing",
+      url: "https://www.twitch.tv/faith"
+    });
+  }, 2000);
+});
 
-MARS16.on("ready", () => { console.log( `Online In Servers` ); let statuses = [ 
-`زۆڵـــــی پــــڕۆچــــێــــکـــــت`, `بــــاپــــیرە گــــەورەی بـــۆتــــەکــــان`, ]; setInterval(function() { let STREAMING = statuses[Math.floor(Math.random() * statuses.length)]; MARS16.user.setActivity(STREAMING, { type: "playing", url: "https://www.twitch.tv/faith" }); }, 2000);});
+MARS17.on("ready", () => {
+  console.log(`Online In Servers`);
+  let statuses = [
+    `زۆڵـــــی پــــڕۆچــــێــــکـــــت`,
+    `بــــاپــــیرە گــــەورەی بـــۆتــــەکــــان`
+  ];
+  setInterval(function() {
+    let STREAMING = statuses[Math.floor(Math.random() * statuses.length)];
+    MARS17.user.setActivity(STREAMING, {
+      type: "playing",
+      url: "https://www.twitch.tv/faith"
+    });
+  }, 2000);
+});
 
-MARS17.on("ready", () => { console.log( `Online In Servers` ); let statuses = [ 
-`زۆڵـــــی پــــڕۆچــــێــــکـــــت`, `بــــاپــــیرە گــــەورەی بـــۆتــــەکــــان`, ]; setInterval(function() { let STREAMING = statuses[Math.floor(Math.random() * statuses.length)]; MARS17.user.setActivity(STREAMING, { type: "playing", url: "https://www.twitch.tv/faith" }); }, 2000);});
+MARS18.on("ready", () => {
+  console.log(`Online In Servers`);
+  let statuses = [
+    `زۆڵـــــی پــــڕۆچــــێــــکـــــت`,
+    `بــــاپــــیرە گــــەورەی بـــۆتــــەکــــان`
+  ];
+  setInterval(function() {
+    let STREAMING = statuses[Math.floor(Math.random() * statuses.length)];
+    MARS18.user.setActivity(STREAMING, {
+      type: "playing",
+      url: "https://www.twitch.tv/faith"
+    });
+  }, 2000);
+});
 
-MARS18.on("ready", () => { console.log( `Online In Servers` ); let statuses = [ 
-`زۆڵـــــی پــــڕۆچــــێــــکـــــت`, `بــــاپــــیرە گــــەورەی بـــۆتــــەکــــان`, ]; setInterval(function() { let STREAMING = statuses[Math.floor(Math.random() * statuses.length)]; MARS18.user.setActivity(STREAMING, { type: "playing", url: "https://www.twitch.tv/faith" }); }, 2000);});
+MARS19.on("ready", () => {
+  console.log(`Online In Servers`);
+  let statuses = [
+    `زۆڵـــــی پــــڕۆچــــێــــکـــــت`,
+    `بــــاپــــیرە گــــەورەی بـــۆتــــەکــــان`
+  ];
+  setInterval(function() {
+    let STREAMING = statuses[Math.floor(Math.random() * statuses.length)];
+    MARS19.user.setActivity(STREAMING, {
+      type: "playing",
+      url: "https://www.twitch.tv/faith"
+    });
+  }, 2000);
+});
 
-MARS19.on("ready", () => { console.log( `Online In Servers` ); let statuses = [ 
-`زۆڵـــــی پــــڕۆچــــێــــکـــــت`, `بــــاپــــیرە گــــەورەی بـــۆتــــەکــــان`, ]; setInterval(function() { let STREAMING = statuses[Math.floor(Math.random() * statuses.length)]; MARS19.user.setActivity(STREAMING, { type: "playing", url: "https://www.twitch.tv/faith" }); }, 2000);});
+MARS20.on("ready", () => {
+  console.log(`Online In Servers`);
+  let statuses = [
+    `زۆڵـــــی پــــڕۆچــــێــــکـــــت`,
+    `بــــاپــــیرە گــــەورەی بـــۆتــــەکــــان`
+  ];
+  setInterval(function() {
+    let STREAMING = statuses[Math.floor(Math.random() * statuses.length)];
+    MARS20.user.setActivity(STREAMING, {
+      type: "playing",
+      url: "https://www.twitch.tv/faith"
+    });
+  }, 2000);
+});
 
-MARS20.on("ready", () => { console.log( `Online In Servers` ); let statuses = [ 
-`زۆڵـــــی پــــڕۆچــــێــــکـــــت`, `بــــاپــــیرە گــــەورەی بـــۆتــــەکــــان`, ]; setInterval(function() { let STREAMING = statuses[Math.floor(Math.random() * statuses.length)]; MARS20.user.setActivity(STREAMING, { type: "playing", url: "https://www.twitch.tv/faith" }); }, 2000);});
+MARS21.on("ready", () => {
+  console.log(`Online In Servers`);
+  let statuses = [
+    `زۆڵـــــی پــــڕۆچــــێــــکـــــت`,
+    `بــــاپــــیرە گــــەورەی بـــۆتــــەکــــان`
+  ];
+  setInterval(function() {
+    let STREAMING = statuses[Math.floor(Math.random() * statuses.length)];
+    MARS21.user.setActivity(STREAMING, {
+      type: "playing",
+      url: "https://www.twitch.tv/faith"
+    });
+  }, 2000);
+});
 
-MARS21.on("ready", () => { console.log( `Online In Servers` ); let statuses = [ 
-`زۆڵـــــی پــــڕۆچــــێــــکـــــت`, `بــــاپــــیرە گــــەورەی بـــۆتــــەکــــان`, ]; setInterval(function() { let STREAMING = statuses[Math.floor(Math.random() * statuses.length)]; MARS21.user.setActivity(STREAMING, { type: "playing", url: "https://www.twitch.tv/faith" }); }, 2000);});
+MARS22.on("ready", () => {
+  console.log(`Online In Servers`);
+  let statuses = [
+    `زۆڵـــــی پــــڕۆچــــێــــکـــــت`,
+    `بــــاپــــیرە گــــەورەی بـــۆتــــەکــــان`
+  ];
+  setInterval(function() {
+    let STREAMING = statuses[Math.floor(Math.random() * statuses.length)];
+    MARS22.user.setActivity(STREAMING, {
+      type: "playing",
+      url: "https://www.twitch.tv/faith"
+    });
+  }, 2000);
+});
 
-MARS22.on("ready", () => { console.log( `Online In Servers` ); let statuses = [ 
-`زۆڵـــــی پــــڕۆچــــێــــکـــــت`, `بــــاپــــیرە گــــەورەی بـــۆتــــەکــــان`, ]; setInterval(function() { let STREAMING = statuses[Math.floor(Math.random() * statuses.length)]; MARS22.user.setActivity(STREAMING, { type: "playing", url: "https://www.twitch.tv/faith" }); }, 2000);});
-
-MARS23.on("ready", () => { console.log( `Online In Servers` ); let statuses = [ 
-`زۆڵـــــی پــــڕۆچــــێــــکـــــت`, `بــــاپــــیرە گــــەورەی بـــۆتــــەکــــان`, ]; setInterval(function() { let STREAMING = statuses[Math.floor(Math.random() * statuses.length)]; MARS23.user.setActivity(STREAMING, { type: "playing", url: "https://www.twitch.tv/faith" }); }, 2000);});
-MARS24.on("ready", () => { console.log( `Online In Servers` ); let statuses = [ 
-`زۆڵـــــی پــــڕۆچــــێــــکـــــت`, `بــــاپــــیرە گــــەورەی بـــۆتــــەکــــان`, ]; setInterval(function() { let STREAMING = statuses[Math.floor(Math.random() * statuses.length)]; MARS24.user.setActivity(STREAMING, { type: "playing", url: "https://www.twitch.tv/faith" }); }, 2000);});
-MARS25.on("ready", () => { console.log( `Online In Servers` ); let statuses = [ 
-`زۆڵـــــی پــــڕۆچــــێــــکـــــت`, `بــــاپــــیرە گــــەورەی بـــۆتــــەکــــان`, ]; setInterval(function() { let STREAMING = statuses[Math.floor(Math.random() * statuses.length)]; MARS25.user.setActivity(STREAMING, { type: "playing", url: "https://www.twitch.tv/faith" }); }, 2000);});
-MARS26.on("ready", () => { console.log( `Online In Servers` ); let statuses = [ 
-`زۆڵـــــی پــــڕۆچــــێــــکـــــت`, `بــــاپــــیرە گــــەورەی بـــۆتــــەکــــان`, ]; setInterval(function() { let STREAMING = statuses[Math.floor(Math.random() * statuses.length)]; MARS26.user.setActivity(STREAMING, { type: "playing", url: "https://www.twitch.tv/faith" }); }, 2000);});
-MARS27.on("ready", () => { console.log( `Online In Servers` ); let statuses = [ 
-`زۆڵـــــی پــــڕۆچــــێــــکـــــت`, `بــــاپــــیرە گــــەورەی بـــۆتــــەکــــان`, ]; setInterval(function() { let STREAMING = statuses[Math.floor(Math.random() * statuses.length)]; MARS27.user.setActivity(STREAMING, { type: "playing", url: "https://www.twitch.tv/faith" }); }, 2000);});
-MARS28.on("ready", () => { console.log( `Online In Servers` ); let statuses = [ 
-`زۆڵـــــی پــــڕۆچــــێــــکـــــت`, `بــــاپــــیرە گــــەورەی بـــۆتــــەکــــان`, ]; setInterval(function() { let STREAMING = statuses[Math.floor(Math.random() * statuses.length)]; MARS28.user.setActivity(STREAMING, { type: "playing", url: "https://www.twitch.tv/faith" }); }, 2000);});
-MARS29.on("ready", () => { console.log( `Online In Servers` ); let statuses = [ 
-`زۆڵـــــی پــــڕۆچــــێــــکـــــت`, `بــــاپــــیرە گــــەورەی بـــۆتــــەکــــان`, ]; setInterval(function() { let STREAMING = statuses[Math.floor(Math.random() * statuses.length)]; MARS29.user.setActivity(STREAMING, { type: "playing", url: "https://www.twitch.tv/faith" }); }, 2000);});
-MARS30.on("ready", () => { console.log( `Online In Servers` ); let statuses = [ 
-`زۆڵـــــی پــــڕۆچــــێــــکـــــت`, `بــــاپــــیرە گــــەورەی بـــۆتــــەکــــان`, ]; setInterval(function() { let STREAMING = statuses[Math.floor(Math.random() * statuses.length)]; MARS30.user.setActivity(STREAMING, { type: "playing", url: "https://www.twitch.tv/faith" }); }, 2000);});
-MARS31.on("ready", () => { console.log( `Online In Servers` ); let statuses = [ 
-`زۆڵـــــی پــــڕۆچــــێــــکـــــت`, `بــــاپــــیرە گــــەورەی بـــۆتــــەکــــان`, ]; setInterval(function() { let STREAMING = statuses[Math.floor(Math.random() * statuses.length)]; MARS31.user.setActivity(STREAMING, { type: "playing", url: "https://www.twitch.tv/faith" }); }, 2000);});
-MARS32.on("ready", () => { console.log( `Online In Servers` ); let statuses = [ 
-`زۆڵـــــی پــــڕۆچــــێــــکـــــت`, `بــــاپــــیرە گــــەورەی بـــۆتــــەکــــان`, ]; setInterval(function() { let STREAMING = statuses[Math.floor(Math.random() * statuses.length)]; MARS32.user.setActivity(STREAMING, { type: "playing", url: "https://www.twitch.tv/faith" }); }, 2000);});
-MARS33.on("ready", () => { console.log( `Online In Servers` ); let statuses = [ 
-`زۆڵـــــی پــــڕۆچــــێــــکـــــت`, `بــــاپــــیرە گــــەورەی بـــۆتــــەکــــان`, ]; setInterval(function() { let STREAMING = statuses[Math.floor(Math.random() * statuses.length)]; MARS33.user.setActivity(STREAMING, { type: "playing", url: "https://www.twitch.tv/faith" }); }, 2000);});
-MARS34.on("ready", () => { console.log( `Online In Servers` ); let statuses = [ 
-`زۆڵـــــی پــــڕۆچــــێــــکـــــت`, `بــــاپــــیرە گــــەورەی بـــۆتــــەکــــان`, ]; setInterval(function() { let STREAMING = statuses[Math.floor(Math.random() * statuses.length)]; MARS34.user.setActivity(STREAMING, { type: "playing", url: "https://www.twitch.tv/faith" }); }, 2000);});
-MARS35.on("ready", () => { console.log( `Online In Servers` ); let statuses = [ 
-`زۆڵـــــی پــــڕۆچــــێــــکـــــت`, `بــــاپــــیرە گــــەورەی بـــۆتــــەکــــان`, ]; setInterval(function() { let STREAMING = statuses[Math.floor(Math.random() * statuses.length)]; MARS35.user.setActivity(STREAMING, { type: "playing", url: "https://www.twitch.tv/faith" }); }, 2000);});
-MARS36.on("ready", () => { console.log( `Online In Servers` ); let statuses = [ 
-`زۆڵـــــی پــــڕۆچــــێــــکـــــت`, `بــــاپــــیرە گــــەورەی بـــۆتــــەکــــان`, ]; setInterval(function() { let STREAMING = statuses[Math.floor(Math.random() * statuses.length)]; MARS36.user.setActivity(STREAMING, { type: "playing", url: "https://www.twitch.tv/faith" }); }, 2000);});
-MARS37.on("ready", () => { console.log( `Online In Servers` ); let statuses = [ 
-`زۆڵـــــی پــــڕۆچــــێــــکـــــت`, `بــــاپــــیرە گــــەورەی بـــۆتــــەکــــان`, ]; setInterval(function() { let STREAMING = statuses[Math.floor(Math.random() * statuses.length)]; MARS37.user.setActivity(STREAMING, { type: "playing", url: "https://www.twitch.tv/faith" }); }, 2000);});
-MARS38.on("ready", () => { console.log( `Online In Servers` ); let statuses = [ 
-`زۆڵـــــی پــــڕۆچــــێــــکـــــت`, `بــــاپــــیرە گــــەورەی بـــۆتــــەکــــان`, ]; setInterval(function() { let STREAMING = statuses[Math.floor(Math.random() * statuses.length)]; MARS38.user.setActivity(STREAMING, { type: "playing", url: "https://www.twitch.tv/faith" }); }, 2000);});
-MARS39.on("ready", () => { console.log( `Online In Servers` ); let statuses = [ 
-`زۆڵـــــی پــــڕۆچــــێــــکـــــت`, `بــــاپــــیرە گــــەورەی بـــۆتــــەکــــان`, ]; setInterval(function() { let STREAMING = statuses[Math.floor(Math.random() * statuses.length)]; MARS39.user.setActivity(STREAMING, { type: "playing", url: "https://www.twitch.tv/faith" }); }, 2000);});
-MARS40.on("ready", () => { console.log( `Online In Servers` ); let statuses = [ 
-`زۆڵـــــی پــــڕۆچــــێــــکـــــت`, `بــــاپــــیرە گــــەورەی بـــۆتــــەکــــان`, ]; setInterval(function() { let STREAMING = statuses[Math.floor(Math.random() * statuses.length)]; MARS40.user.setActivity(STREAMING, { type: "playing", url: "https://www.twitch.tv/faith" }); }, 2000);});
-MARS41.on("ready", () => { console.log( `Online In Servers` ); let statuses = [ 
-`زۆڵـــــی پــــڕۆچــــێــــکـــــت`, `بــــاپــــیرە گــــەورەی بـــۆتــــەکــــان`, ]; setInterval(function() { let STREAMING = statuses[Math.floor(Math.random() * statuses.length)]; MARS41.user.setActivity(STREAMING, { type: "playing", url: "https://www.twitch.tv/faith" }); }, 2000);});
-MARS42.on("ready", () => { console.log( `Online In Servers` ); let statuses = [ 
-`زۆڵـــــی پــــڕۆچــــێــــکـــــت`, `بــــاپــــیرە گــــەورەی بـــۆتــــەکــــان`, ]; setInterval(function() { let STREAMING = statuses[Math.floor(Math.random() * statuses.length)]; MARS42.user.setActivity(STREAMING, { type: "playing", url: "https://www.twitch.tv/faith" }); }, 2000);});
-MARS43.on("ready", () => { console.log( `Online In Servers` ); let statuses = [ 
-`زۆڵـــــی پــــڕۆچــــێــــکـــــت`, `بــــاپــــیرە گــــەورەی بـــۆتــــەکــــان`, ]; setInterval(function() { let STREAMING = statuses[Math.floor(Math.random() * statuses.length)]; MARS43.user.setActivity(STREAMING, { type: "playing", url: "https://www.twitch.tv/faith" }); }, 2000);});
-MARS44.on("ready", () => { console.log( `Online In Servers` ); let statuses = [ 
-`زۆڵـــــی پــــڕۆچــــێــــکـــــت`, `بــــاپــــیرە گــــەورەی بـــۆتــــەکــــان`, ]; setInterval(function() { let STREAMING = statuses[Math.floor(Math.random() * statuses.length)]; MARS44.user.setActivity(STREAMING, { type: "playing", url: "https://www.twitch.tv/faith" }); }, 2000);});
-MARS45.on("ready", () => { console.log( `Online In Servers` ); let statuses = [ 
-`زۆڵـــــی پــــڕۆچــــێــــکـــــت`, `بــــاپــــیرە گــــەورەی بـــۆتــــەکــــان`, ]; setInterval(function() { let STREAMING = statuses[Math.floor(Math.random() * statuses.length)]; MARS45.user.setActivity(STREAMING, { type: "playing", url: "https://www.twitch.tv/faith" }); }, 2000);});
-MARS46.on("ready", () => { console.log( `Online In Servers` ); let statuses = [ 
-`زۆڵـــــی پــــڕۆچــــێــــکـــــت`, `بــــاپــــیرە گــــەورەی بـــۆتــــەکــــان`, ]; setInterval(function() { let STREAMING = statuses[Math.floor(Math.random() * statuses.length)]; MARS46.user.setActivity(STREAMING, { type: "playing", url: "https://www.twitch.tv/faith" }); }, 2000);});
-MARS47.on("ready", () => { console.log( `Online In Servers` ); let statuses = [ 
-`زۆڵـــــی پــــڕۆچــــێــــکـــــت`, `بــــاپــــیرە گــــەورەی بـــۆتــــەکــــان`, ]; setInterval(function() { let STREAMING = statuses[Math.floor(Math.random() * statuses.length)]; MARS47.user.setActivity(STREAMING, { type: "playing", url: "https://www.twitch.tv/faith" }); }, 2000);});
-MARS48.on("ready", () => { console.log( `Online In Servers` ); let statuses = [ 
-`زۆڵـــــی پــــڕۆچــــێــــکـــــت`, `بــــاپــــیرە گــــەورەی بـــۆتــــەکــــان`, ]; setInterval(function() { let STREAMING = statuses[Math.floor(Math.random() * statuses.length)]; MARS48.user.setActivity(STREAMING, { type: "playing", url: "https://www.twitch.tv/faith" }); }, 2000);});
-MARS49.on("ready", () => { console.log( `Online In Servers` ); let statuses = [ 
-`زۆڵـــــی پــــڕۆچــــێــــکـــــت`, `بــــاپــــیرە گــــەورەی بـــۆتــــەکــــان`, ]; setInterval(function() { let STREAMING = statuses[Math.floor(Math.random() * statuses.length)]; MARS49.user.setActivity(STREAMING, { type: "playing", url: "https://www.twitch.tv/faith" }); }, 2000);});
-MARS50.on("ready", () => { console.log( `Online In Servers` ); let statuses = [ 
-`زۆڵـــــی پــــڕۆچــــێــــکـــــت`, `بــــاپــــیرە گــــەورەی بـــۆتــــەکــــان`, ]; setInterval(function() { let STREAMING = statuses[Math.floor(Math.random() * statuses.length)]; MARS50.user.setActivity(STREAMING, { type: "playing", url: "https://www.twitch.tv/faith" }); }, 2000);});
-
-
-
-
+MARS23.on("ready", () => {
+  console.log(`Online In Servers`);
+  let statuses = [
+    `زۆڵـــــی پــــڕۆچــــێــــکـــــت`,
+    `بــــاپــــیرە گــــەورەی بـــۆتــــەکــــان`
+  ];
+  setInterval(function() {
+    let STREAMING = statuses[Math.floor(Math.random() * statuses.length)];
+    MARS23.user.setActivity(STREAMING, {
+      type: "playing",
+      url: "https://www.twitch.tv/faith"
+    });
+  }, 2000);
+});
+MARS24.on("ready", () => {
+  console.log(`Online In Servers`);
+  let statuses = [
+    `زۆڵـــــی پــــڕۆچــــێــــکـــــت`,
+    `بــــاپــــیرە گــــەورەی بـــۆتــــەکــــان`
+  ];
+  setInterval(function() {
+    let STREAMING = statuses[Math.floor(Math.random() * statuses.length)];
+    MARS24.user.setActivity(STREAMING, {
+      type: "playing",
+      url: "https://www.twitch.tv/faith"
+    });
+  }, 2000);
+});
+MARS25.on("ready", () => {
+  console.log(`Online In Servers`);
+  let statuses = [
+    `زۆڵـــــی پــــڕۆچــــێــــکـــــت`,
+    `بــــاپــــیرە گــــەورەی بـــۆتــــەکــــان`
+  ];
+  setInterval(function() {
+    let STREAMING = statuses[Math.floor(Math.random() * statuses.length)];
+    MARS25.user.setActivity(STREAMING, {
+      type: "playing",
+      url: "https://www.twitch.tv/faith"
+    });
+  }, 2000);
+});
+MARS26.on("ready", () => {
+  console.log(`Online In Servers`);
+  let statuses = [
+    `زۆڵـــــی پــــڕۆچــــێــــکـــــت`,
+    `بــــاپــــیرە گــــەورەی بـــۆتــــەکــــان`
+  ];
+  setInterval(function() {
+    let STREAMING = statuses[Math.floor(Math.random() * statuses.length)];
+    MARS26.user.setActivity(STREAMING, {
+      type: "playing",
+      url: "https://www.twitch.tv/faith"
+    });
+  }, 2000);
+});
+MARS27.on("ready", () => {
+  console.log(`Online In Servers`);
+  let statuses = [
+    `زۆڵـــــی پــــڕۆچــــێــــکـــــت`,
+    `بــــاپــــیرە گــــەورەی بـــۆتــــەکــــان`
+  ];
+  setInterval(function() {
+    let STREAMING = statuses[Math.floor(Math.random() * statuses.length)];
+    MARS27.user.setActivity(STREAMING, {
+      type: "playing",
+      url: "https://www.twitch.tv/faith"
+    });
+  }, 2000);
+});
+MARS28.on("ready", () => {
+  console.log(`Online In Servers`);
+  let statuses = [
+    `زۆڵـــــی پــــڕۆچــــێــــکـــــت`,
+    `بــــاپــــیرە گــــەورەی بـــۆتــــەکــــان`
+  ];
+  setInterval(function() {
+    let STREAMING = statuses[Math.floor(Math.random() * statuses.length)];
+    MARS28.user.setActivity(STREAMING, {
+      type: "playing",
+      url: "https://www.twitch.tv/faith"
+    });
+  }, 2000);
+});
+MARS29.on("ready", () => {
+  console.log(`Online In Servers`);
+  let statuses = [
+    `زۆڵـــــی پــــڕۆچــــێــــکـــــت`,
+    `بــــاپــــیرە گــــەورەی بـــۆتــــەکــــان`
+  ];
+  setInterval(function() {
+    let STREAMING = statuses[Math.floor(Math.random() * statuses.length)];
+    MARS29.user.setActivity(STREAMING, {
+      type: "playing",
+      url: "https://www.twitch.tv/faith"
+    });
+  }, 2000);
+});
+MARS30.on("ready", () => {
+  console.log(`Online In Servers`);
+  let statuses = [
+    `زۆڵـــــی پــــڕۆچــــێــــکـــــت`,
+    `بــــاپــــیرە گــــەورەی بـــۆتــــەکــــان`
+  ];
+  setInterval(function() {
+    let STREAMING = statuses[Math.floor(Math.random() * statuses.length)];
+    MARS30.user.setActivity(STREAMING, {
+      type: "playing",
+      url: "https://www.twitch.tv/faith"
+    });
+  }, 2000);
+});
+MARS31.on("ready", () => {
+  console.log(`Online In Servers`);
+  let statuses = [
+    `زۆڵـــــی پــــڕۆچــــێــــکـــــت`,
+    `بــــاپــــیرە گــــەورەی بـــۆتــــەکــــان`
+  ];
+  setInterval(function() {
+    let STREAMING = statuses[Math.floor(Math.random() * statuses.length)];
+    MARS31.user.setActivity(STREAMING, {
+      type: "playing",
+      url: "https://www.twitch.tv/faith"
+    });
+  }, 2000);
+});
+MARS32.on("ready", () => {
+  console.log(`Online In Servers`);
+  let statuses = [
+    `زۆڵـــــی پــــڕۆچــــێــــکـــــت`,
+    `بــــاپــــیرە گــــەورەی بـــۆتــــەکــــان`
+  ];
+  setInterval(function() {
+    let STREAMING = statuses[Math.floor(Math.random() * statuses.length)];
+    MARS32.user.setActivity(STREAMING, {
+      type: "playing",
+      url: "https://www.twitch.tv/faith"
+    });
+  }, 2000);
+});
+MARS33.on("ready", () => {
+  console.log(`Online In Servers`);
+  let statuses = [
+    `زۆڵـــــی پــــڕۆچــــێــــکـــــت`,
+    `بــــاپــــیرە گــــەورەی بـــۆتــــەکــــان`
+  ];
+  setInterval(function() {
+    let STREAMING = statuses[Math.floor(Math.random() * statuses.length)];
+    MARS33.user.setActivity(STREAMING, {
+      type: "playing",
+      url: "https://www.twitch.tv/faith"
+    });
+  }, 2000);
+});
+MARS34.on("ready", () => {
+  console.log(`Online In Servers`);
+  let statuses = [
+    `زۆڵـــــی پــــڕۆچــــێــــکـــــت`,
+    `بــــاپــــیرە گــــەورەی بـــۆتــــەکــــان`
+  ];
+  setInterval(function() {
+    let STREAMING = statuses[Math.floor(Math.random() * statuses.length)];
+    MARS34.user.setActivity(STREAMING, {
+      type: "playing",
+      url: "https://www.twitch.tv/faith"
+    });
+  }, 2000);
+});
+MARS35.on("ready", () => {
+  console.log(`Online In Servers`);
+  let statuses = [
+    `زۆڵـــــی پــــڕۆچــــێــــکـــــت`,
+    `بــــاپــــیرە گــــەورەی بـــۆتــــەکــــان`
+  ];
+  setInterval(function() {
+    let STREAMING = statuses[Math.floor(Math.random() * statuses.length)];
+    MARS35.user.setActivity(STREAMING, {
+      type: "playing",
+      url: "https://www.twitch.tv/faith"
+    });
+  }, 2000);
+});
+MARS36.on("ready", () => {
+  console.log(`Online In Servers`);
+  let statuses = [
+    `زۆڵـــــی پــــڕۆچــــێــــکـــــت`,
+    `بــــاپــــیرە گــــەورەی بـــۆتــــەکــــان`
+  ];
+  setInterval(function() {
+    let STREAMING = statuses[Math.floor(Math.random() * statuses.length)];
+    MARS36.user.setActivity(STREAMING, {
+      type: "playing",
+      url: "https://www.twitch.tv/faith"
+    });
+  }, 2000);
+});
+MARS37.on("ready", () => {
+  console.log(`Online In Servers`);
+  let statuses = [
+    `زۆڵـــــی پــــڕۆچــــێــــکـــــت`,
+    `بــــاپــــیرە گــــەورەی بـــۆتــــەکــــان`
+  ];
+  setInterval(function() {
+    let STREAMING = statuses[Math.floor(Math.random() * statuses.length)];
+    MARS37.user.setActivity(STREAMING, {
+      type: "playing",
+      url: "https://www.twitch.tv/faith"
+    });
+  }, 2000);
+});
+MARS38.on("ready", () => {
+  console.log(`Online In Servers`);
+  let statuses = [
+    `زۆڵـــــی پــــڕۆچــــێــــکـــــت`,
+    `بــــاپــــیرە گــــەورەی بـــۆتــــەکــــان`
+  ];
+  setInterval(function() {
+    let STREAMING = statuses[Math.floor(Math.random() * statuses.length)];
+    MARS38.user.setActivity(STREAMING, {
+      type: "playing",
+      url: "https://www.twitch.tv/faith"
+    });
+  }, 2000);
+});
+MARS39.on("ready", () => {
+  console.log(`Online In Servers`);
+  let statuses = [
+    `زۆڵـــــی پــــڕۆچــــێــــکـــــت`,
+    `بــــاپــــیرە گــــەورەی بـــۆتــــەکــــان`
+  ];
+  setInterval(function() {
+    let STREAMING = statuses[Math.floor(Math.random() * statuses.length)];
+    MARS39.user.setActivity(STREAMING, {
+      type: "playing",
+      url: "https://www.twitch.tv/faith"
+    });
+  }, 2000);
+});
+MARS40.on("ready", () => {
+  console.log(`Online In Servers`);
+  let statuses = [
+    `زۆڵـــــی پــــڕۆچــــێــــکـــــت`,
+    `بــــاپــــیرە گــــەورەی بـــۆتــــەکــــان`
+  ];
+  setInterval(function() {
+    let STREAMING = statuses[Math.floor(Math.random() * statuses.length)];
+    MARS40.user.setActivity(STREAMING, {
+      type: "playing",
+      url: "https://www.twitch.tv/faith"
+    });
+  }, 2000);
+});
+MARS41.on("ready", () => {
+  console.log(`Online In Servers`);
+  let statuses = [
+    `زۆڵـــــی پــــڕۆچــــێــــکـــــت`,
+    `بــــاپــــیرە گــــەورەی بـــۆتــــەکــــان`
+  ];
+  setInterval(function() {
+    let STREAMING = statuses[Math.floor(Math.random() * statuses.length)];
+    MARS41.user.setActivity(STREAMING, {
+      type: "playing",
+      url: "https://www.twitch.tv/faith"
+    });
+  }, 2000);
+});
+MARS42.on("ready", () => {
+  console.log(`Online In Servers`);
+  let statuses = [
+    `زۆڵـــــی پــــڕۆچــــێــــکـــــت`,
+    `بــــاپــــیرە گــــەورەی بـــۆتــــەکــــان`
+  ];
+  setInterval(function() {
+    let STREAMING = statuses[Math.floor(Math.random() * statuses.length)];
+    MARS42.user.setActivity(STREAMING, {
+      type: "playing",
+      url: "https://www.twitch.tv/faith"
+    });
+  }, 2000);
+});
+MARS43.on("ready", () => {
+  console.log(`Online In Servers`);
+  let statuses = [
+    `زۆڵـــــی پــــڕۆچــــێــــکـــــت`,
+    `بــــاپــــیرە گــــەورەی بـــۆتــــەکــــان`
+  ];
+  setInterval(function() {
+    let STREAMING = statuses[Math.floor(Math.random() * statuses.length)];
+    MARS43.user.setActivity(STREAMING, {
+      type: "playing",
+      url: "https://www.twitch.tv/faith"
+    });
+  }, 2000);
+});
+MARS44.on("ready", () => {
+  console.log(`Online In Servers`);
+  let statuses = [
+    `زۆڵـــــی پــــڕۆچــــێــــکـــــت`,
+    `بــــاپــــیرە گــــەورەی بـــۆتــــەکــــان`
+  ];
+  setInterval(function() {
+    let STREAMING = statuses[Math.floor(Math.random() * statuses.length)];
+    MARS44.user.setActivity(STREAMING, {
+      type: "playing",
+      url: "https://www.twitch.tv/faith"
+    });
+  }, 2000);
+});
+MARS45.on("ready", () => {
+  console.log(`Online In Servers`);
+  let statuses = [
+    `زۆڵـــــی پــــڕۆچــــێــــکـــــت`,
+    `بــــاپــــیرە گــــەورەی بـــۆتــــەکــــان`
+  ];
+  setInterval(function() {
+    let STREAMING = statuses[Math.floor(Math.random() * statuses.length)];
+    MARS45.user.setActivity(STREAMING, {
+      type: "playing",
+      url: "https://www.twitch.tv/faith"
+    });
+  }, 2000);
+});
+MARS46.on("ready", () => {
+  console.log(`Online In Servers`);
+  let statuses = [
+    `زۆڵـــــی پــــڕۆچــــێــــکـــــت`,
+    `بــــاپــــیرە گــــەورەی بـــۆتــــەکــــان`
+  ];
+  setInterval(function() {
+    let STREAMING = statuses[Math.floor(Math.random() * statuses.length)];
+    MARS46.user.setActivity(STREAMING, {
+      type: "playing",
+      url: "https://www.twitch.tv/faith"
+    });
+  }, 2000);
+});
+MARS47.on("ready", () => {
+  console.log(`Online In Servers`);
+  let statuses = [
+    `زۆڵـــــی پــــڕۆچــــێــــکـــــت`,
+    `بــــاپــــیرە گــــەورەی بـــۆتــــەکــــان`
+  ];
+  setInterval(function() {
+    let STREAMING = statuses[Math.floor(Math.random() * statuses.length)];
+    MARS47.user.setActivity(STREAMING, {
+      type: "playing",
+      url: "https://www.twitch.tv/faith"
+    });
+  }, 2000);
+});
+MARS48.on("ready", () => {
+  console.log(`Online In Servers`);
+  let statuses = [
+    `زۆڵـــــی پــــڕۆچــــێــــکـــــت`,
+    `بــــاپــــیرە گــــەورەی بـــۆتــــەکــــان`
+  ];
+  setInterval(function() {
+    let STREAMING = statuses[Math.floor(Math.random() * statuses.length)];
+    MARS48.user.setActivity(STREAMING, {
+      type: "playing",
+      url: "https://www.twitch.tv/faith"
+    });
+  }, 2000);
+});
+MARS49.on("ready", () => {
+  console.log(`Online In Servers`);
+  let statuses = [
+    `زۆڵـــــی پــــڕۆچــــێــــکـــــت`,
+    `بــــاپــــیرە گــــەورەی بـــۆتــــەکــــان`
+  ];
+  setInterval(function() {
+    let STREAMING = statuses[Math.floor(Math.random() * statuses.length)];
+    MARS49.user.setActivity(STREAMING, {
+      type: "playing",
+      url: "https://www.twitch.tv/faith"
+    });
+  }, 2000);
+});
+MARS50.on("ready", () => {
+  console.log(`Online In Servers`);
+  let statuses = [
+    `زۆڵـــــی پــــڕۆچــــێــــکـــــت`,
+    `بــــاپــــیرە گــــەورەی بـــۆتــــەکــــان`
+  ];
+  setInterval(function() {
+    let STREAMING = statuses[Math.floor(Math.random() * statuses.length)];
+    MARS50.user.setActivity(STREAMING, {
+      type: "playing",
+      url: "https://www.twitch.tv/faith"
+    });
+  }, 2000);
+});
 
 // ======= [ PROFILE - INFO end ] ======== //
 
 /// by mars
 
 MARS.login("Nzc3MjM3MjIxODM2NzE4MTQx.X7Ag4w.sVqVWljU3LXNva_EI9tImn2FZDI");
-MARS2.login("Nzc3MjM4MjYzMTczODczNjY0.X7Ah9Q.7gwIsa6I6Ni1wqympYSZYkQ9nkQ");
-MARS3.login("Nzc3MjM5Njc3MzEyMTcyMDk0.X7AjFg.A8vT8Z2s4l3c7stggIqMHPic_mg");
-MARS4.login("Nzc3MjQwNzQxNTE2MDE3NzE2.X7Ak3A.kSV8Hhau2pcxNKVdBYUOLuubKpk");
+MARS2.login("Nzk3MjM2NjMzMDAyNDQyODEz.X_jn8g.439tHlnjQ9bi9LF3rA5U4FbEpE0");
+MARS3.login("");
+MARS4.login("");
 MARS5.login("Nzc3MjQzMjE0NDk0ODI2NTE3.X7Am1Q.ck61Xn43hwMu37hVVAERi8Tkiec");
 MARS6.login("Nzc3MjQyMTY4NDk0NTIyMzY4.X7Aliw.7PNpKWew7oJf_GFPaof9Wu4hGZ85");
 MARS7.login("Nzc3MjQ0MjcyMDQ2NjM3MDg2.X7Anjg.1yS7lB44Iidk3HRH95A0eBwRE9U");
 MARS8.login("Nzc3MjQ1MjMxNTM5ODE0NDIx.X7Aojg.NMYb-QHDxbnGHAsWpwhhuq9mX2A");
 MARS9.login("Nzc3MjQ2MTM2NTc3NTU2NTQw.X7ApMw.Qp7yvMzPd6-DpV7AaaQWUImcUwc");
 MARS10.login("Nzc3MjQ3NDE4NDMyNzQ5NTc4.X7Aqaw.UOruKxKH0DBnWRNJdxju4dPOp0o");
-MARS11.login("Nzc3MjQ4NTA2MzAwNTk2MjM1.X7ArZA.8b4APdHJjTatzzVWbY9wEHJRtNk")
+MARS11.login("Nzc3MjQ4NTA2MzAwNTk2MjM1.X7ArZA.8b4APdHJjTatzzVWbY9wEHJRtNk");
 MARS12.login("Nzc3MjQ5NTQ2NjgxMDU3MzI0.X7AtJw.ivRhHgwEi77ZlPMsgP6Vt3lnfTA");
 MARS13.login("Nzc3NjAxNTE4MzQ5NTgyMzc1.X7F0Vw.vGA_Yuoom3Ezsv56eq5cKxAk33Q");
 MARS14.login("Nzc3NjAyMjY1NzM3MTk5Njg2.X7F1AA.1IeRUdJQo6njoe74hRBJYNwKmVY");
