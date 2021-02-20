@@ -2130,7 +2130,7 @@ MARS.on("message", message => {
       message.member.voiceChannel
         .join()
         .then(connection => {
-          message.reply("**😂هـــــاتــــم**!");
+          message.reply("**هاتم دڵ**!");
         })
         .catch(console.log);
     } else {
@@ -2146,13 +2146,11 @@ MARS2.on("message", message => {
       message.member.voiceChannel
         .join()
         .then(connection => {
-          message.reply("**😂هـــــاتــــم**!");
+          message.reply("**هـــاتم گوڵەکەم**!");
         })
         .catch(console.log);
     } else {
-      message.reply(
-        "****"
-      );
+      message.reply("**لەکوێی دڵەکەم**");
     }
   }
 });
@@ -2168,9 +2166,7 @@ MARS3.on("message", message => {
         })
         .catch(console.log);
     } else {
-      message.reply(
-        "**😁هـــــەتـــــیوو لـــــە ڤــــۆیــــس نـــــیــــــت**"
-      );
+      message.reply("**کوای **");
     }
   }
 });
