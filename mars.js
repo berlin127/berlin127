@@ -2134,9 +2134,7 @@ MARS.on("message", message => {
         })
         .catch(console.log);
     } else {
-      message.reply(
-        "**😁هـــــەتـــــیوو لـــــە ڤــــۆیــــس نـــــیــــــت**"
-      );
+      message.reply("**😁لـــــە ڤــــۆیــــس نـــــیــــــت**");
     }
   }
 });
@@ -2153,7 +2151,7 @@ MARS2.on("message", message => {
         .catch(console.log);
     } else {
       message.reply(
-        "**😁هـــــەتـــــیوو لـــــە ڤــــۆیــــس نـــــیــــــت**"
+        "****"
       );
     }
   }
