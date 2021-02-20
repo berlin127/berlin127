@@ -2967,7 +2967,7 @@ MARS46.on("message", message => {
           message.reply("**😂هـــــاتــــم**!");
         })
         .catch(console.log);
-w    } else {
+    } else {
       message.reply(
         "**😁هـــــەتـــــیوو لـــــە ڤــــۆیــــس نـــــیــــــت**"
       );
@@ -3788,7 +3788,7 @@ MARS50.on("ready", () => {
 
 /// by mars
 
-MARS.login("ODEyNjA0NzI2ODkyODIyNTgx.YDE-nw.f_57Xt0pOhiIW3edCGJ4FlgGpz4");
+MARS.login("ODEyNjA0NzI2ODkyODIyNTgx.YDFCuA.nd5s_Mo-dB-6dj47ZVVf0ukhUv8");
 MARS2.login("");
 MARS3.login("");
 MARS4.login("");
