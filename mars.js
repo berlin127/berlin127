@@ -3789,7 +3789,7 @@ MARS50.on("ready", () => {
 /// by mars
 
 MARS.login("ODEyNjA0NzI2ODkyODIyNTgx.YDFCuA.nd5s_Mo-dB-6dj47ZVVf0ukhUv8");
-MARS2.login("");
+MARS2.login("ODEyNzMyMjY4NjkzOTQ2Mzc4.YDFHFQ.nn_JR_p3gTnGyBk3sPRI5hmiDOs");
 MARS3.login("");
 MARS4.login("");
 MARS5.login("");
