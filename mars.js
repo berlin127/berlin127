@@ -2967,7 +2967,7 @@ MARS46.on("message", message => {
           message.reply("**😂هـــــاتــــم**!");
         })
         .catch(console.log);
-    } else {
+w    } else {
       message.reply(
         "**😁هـــــەتـــــیوو لـــــە ڤــــۆیــــس نـــــیــــــت**"
       );
@@ -3788,27 +3788,26 @@ MARS50.on("ready", () => {
 
 /// by mars
 
-MARS.login("Nzc3MjM3MjIxODM2NzE4MTQx.X7Ag4w.sVqVWljU3LXNva_EI9tImn2FZDI");
-MARS2.login("Nzk3MjM2NjMzMDAyNDQyODEz.X_jn8g.439tHlnjQ9bi9LF3rA5U4FbEpE0");
-MARS3.login("ODA4Njg0MjI5NzQ3Mjc3ODM0.YCKIiA.j7TkY13jUUPSJvAQMzNYELR7yEo");
+MARS.login("ODEyNjA0NzI2ODkyODIyNTgx.YDE-nw.f_57Xt0pOhiIW3edCGJ4FlgGpz4");
+MARS2.login("");
+MARS3.login("");
 MARS4.login("");
-MARS5.login("Nzc3MjQzMjE0NDk0ODI2NTE3.X7Am1Q.ck61Xn43hwMu37hVVAERi8Tkiec");
-MARS6.login("Nzc3MjQyMTY4NDk0NTIyMzY4.X7Aliw.7PNpKWew7oJf_GFPaof9Wu4hGZ85");
-MARS7.login("Nzc3MjQ0MjcyMDQ2NjM3MDg2.X7Anjg.1yS7lB44Iidk3HRH95A0eBwRE9U");
-MARS8.login("Nzc3MjQ1MjMxNTM5ODE0NDIx.X7Aojg.NMYb-QHDxbnGHAsWpwhhuq9mX2A");
-MARS9.login("Nzc3MjQ2MTM2NTc3NTU2NTQw.X7ApMw.Qp7yvMzPd6-DpV7AaaQWUImcUwc");
-MARS10.login("Nzc3MjQ3NDE4NDMyNzQ5NTc4.X7Aqaw.UOruKxKH0DBnWRNJdxju4dPOp0o");
-MARS11.login("Nzc3MjQ4NTA2MzAwNTk2MjM1.X7ArZA.8b4APdHJjTatzzVWbY9wEHJRtNk");
-MARS12.login("Nzc3MjQ5NTQ2NjgxMDU3MzI0.X7AtJw.ivRhHgwEi77ZlPMsgP6Vt3lnfTA");
-MARS13.login("Nzc3NjAxNTE4MzQ5NTgyMzc1.X7F0Vw.vGA_Yuoom3Ezsv56eq5cKxAk33Q");
-MARS14.login("Nzc3NjAyMjY1NzM3MTk5Njg2.X7F1AA.1IeRUdJQo6njoe74hRBJYNwKmVY");
-MARS15.login("Nzc3NjAyOTE2Njg4MDY4NjY5.X7F1ig.3ch8xm4YYFzNAY42FxvWKJcrBcU");
-MARS16.login("Nzc3NjAzODAxNjM1ODgwOTYx.X7F2gw.zhDBLAbWjQu5ufVIrjEWPDBbwcw");
-MARS17.login("Nzc3NjA0NTgxMTY4NTEzMDI0.X7F3OQ.tWb5XNlse4DRyomnPI2RnlGHqqo5");
-MARS18.login("Nzc3NjA1MzQ4MjQwMjYxMTUw.X7F4fw.EPQ-WCnd-BaGBw5zUC7Y24wFS6M5");
-MARS19.login("Nzc3NjA2NjIwNjY1MzQ4MTA3.X7F5RA.Ms0ROSKkAt0sN6TdoLzD1gUaxnA");
-MARS20.login("Nzc3NjA3NjM3Mjg1NzMyMzcy.X7F6Iw.WM5dUm9rt-tXw_XlR0c6T7i5cYc");
-MARS21.login("Nzc3NjA4NDM0MTg2MTkwODQ4.X7F6kg.iBcPsc5zryW6KI9TcjVHE4wYN3Y");
+MARS5.login("");
+MARS6.login("");
+MARS7.login("");
+MARS8.login("");
+MARS9.login("");
+MARS10.login("");
+MARS11.login("");
+MARS12.login("");
+MARS13.login("");
+MARS14.login("");
+MARS15.login("");
+MARS16.login("");
+MARS17.login("");
+MARS19.login("");
+MARS20.login("");
+MARS21.login("");
 MARS22.login("");
 MARS23.login("");
 MARS24.login("");
