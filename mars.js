@@ -3078,7 +3078,7 @@ MARS.on("ready", () => {
 
 MARS2.on("ready", () => {
   console.log(`Online In Servers`);
-  let statuses = [`《KP》UP`];
+  let statuses = [`PLAY BY LEGEND`];
   setInterval(function() {
     let STREAMING = statuses[Math.floor(Math.random() * statuses.length)];
     MARS2.user.setActivity(STREAMING, {
@@ -3090,7 +3090,7 @@ MARS2.on("ready", () => {
 
 MARS3.on("ready", () => {
   console.log(`Online In Servers`);
-  let statuses = [`《KP》UP`];
+  let statuses = [`PLAY BY LEGEND`];
   setInterval(function() {
     let STREAMING = statuses[Math.floor(Math.random() * statuses.length)];
     MARS3.user.setActivity(STREAMING, {
